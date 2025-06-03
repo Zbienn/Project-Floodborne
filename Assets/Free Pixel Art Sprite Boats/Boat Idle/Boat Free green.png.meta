@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 2c7bb8c6bfeb3a7449ef0484e15f1f2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1498597104236629248
+    second: Boat Free green_0
+  - first:
+      213: 738331309879197944
+    second: Boat Free green_1
+  - first:
+      213: -373540406021063580
+    second: Boat Free green_2
+  - first:
+      213: -2631403370620981887
+    second: Boat Free green_3
+  - first:
+      213: 8691647157514888607
+    second: Boat Free green_4
+  - first:
+      213: 1486955072152954669
+    second: Boat Free green_5
+  - first:
+      213: 8980288399703401304
+    second: Boat Free green_6
+  - first:
+      213: 8943533435747622769
+    second: Boat Free green_7
+  - first:
+      213: -4414508689229661865
+    second: Boat Free green_8
+  - first:
+      213: 4597150585234984502
+    second: Boat Free green_9
+  - first:
+      213: 1600796973461007199
+    second: Boat Free green_10
+  - first:
+      213: -2133779010715563816
+    second: Boat Free green_11
+  - first:
+      213: -639297811163848629
+    second: Boat Free green_12
+  - first:
+      213: -7757682430849600533
+    second: Boat Free green_13
+  - first:
+      213: -5461768599927982667
+    second: Boat Free green_14
+  - first:
+      213: 2260388541062661377
+    second: Boat Free green_15
+  - first:
+      213: -4730737266873238530
+    second: Boat Free green_16
+  - first:
+      213: 6863164857470089414
+    second: Boat Free green_17
+  - first:
+      213: 5107484355641647011
+    second: Boat Free green_18
+  - first:
+      213: -8027031026077361170
+    second: Boat Free green_19
+  - first:
+      213: 8606746920771103925
+    second: Boat Free green_20
+  - first:
+      213: -6153350613290761446
+    second: Boat Free green_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boat Free green_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 148
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003fb84afd9e33be0800000000000000
+      internalID: -1498597104236629248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat Free green_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 142
+        width: 24
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46cfbd5dafae0daf0800000000000000
+      internalID: -373540406021063580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat Free green_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 74
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853e1ec48b460ac70800000000000000
+      internalID: 8980288399703401304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6041175760cdd6e4aab04dd3328637e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boat Free green_0: -1498597104236629248
+      Boat Free green_1: 738331309879197944
+      Boat Free green_10: 1600796973461007199
+      Boat Free green_11: -2133779010715563816
+      Boat Free green_12: -639297811163848629
+      Boat Free green_13: -7757682430849600533
+      Boat Free green_14: -5461768599927982667
+      Boat Free green_15: 2260388541062661377
+      Boat Free green_16: -4730737266873238530
+      Boat Free green_17: 6863164857470089414
+      Boat Free green_18: 5107484355641647011
+      Boat Free green_19: -8027031026077361170
+      Boat Free green_2: -373540406021063580
+      Boat Free green_20: 8606746920771103925
+      Boat Free green_21: -6153350613290761446
+      Boat Free green_3: -2631403370620981887
+      Boat Free green_4: 8691647157514888607
+      Boat Free green_5: 1486955072152954669
+      Boat Free green_6: 8980288399703401304
+      Boat Free green_7: 8943533435747622769
+      Boat Free green_8: -4414508689229661865
+      Boat Free green_9: 4597150585234984502
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
