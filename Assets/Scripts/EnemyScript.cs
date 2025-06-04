@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 3f;
     private Transform target;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private EnemyData data;
+
+    public int DamageAmount => data.DamageAmount;
 
     void Awake()
     {
@@ -16,12 +19,10 @@ public class EnemyScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (target == null) return;
 
         Vector2 direction = ((Vector2)target.position - rb.position).normalized;
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + data.Speed * Time.deltaTime * direction);
 
-        // Flip horizontal conforme a direção no eixo X
         if (direction.x != 0)
             spriteRenderer.flipX = direction.x < 0;
     }
