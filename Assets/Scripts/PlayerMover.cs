@@ -4,7 +4,7 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Transform spriteTransform;
 
     private Vector2 movement;
 
@@ -16,7 +16,7 @@ public class PlayerMover : MonoBehaviour
         if (movement != Vector2.zero)
         {
             float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+            spriteTransform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
         }
     }
 

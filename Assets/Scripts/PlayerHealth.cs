@@ -1,29 +1,29 @@
 using UnityEngine;
+using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private PlayerHealthData healthData;
+    [SerializeField] private Slider _healthUi;
+    private bool isInvulnerable = false;
 
     void Awake()
     {
         ResetHealth();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
+        if (isInvulnerable) return;
+
         if (collision.gameObject.CompareTag("Enemy"))
-        {
-            EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
-            if (enemy != null)
-            {
-                int damage = enemy.DamageAmount;
+        {            
+                int damage = collision.gameObject.GetComponent<EnemyScript>().DamageAmount;
                 TakeDamage(damage);
-                Debug.Log($"Player levou {damage} de dano!");
-            }
-            else
-            {
-                Debug.LogWarning("Colidiu com Enemy mas não encontrou componente Enemy!");
-            }
+                _healthUi.value = healthData.CurrentHealth;
+                StartCoroutine(InvulnerabilityCoroutine());
         }
     }
 
@@ -45,6 +45,13 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Jogador morreu!");
-        // Lógica de fim de jogo aqui
+        // Aqui colocas a lógica de game over ou respawn
+    }
+
+    private IEnumerator InvulnerabilityCoroutine()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(1f);
+        isInvulnerable = false;
     }
 }
