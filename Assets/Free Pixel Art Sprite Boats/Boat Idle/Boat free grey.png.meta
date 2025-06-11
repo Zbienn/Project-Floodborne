@@ -672,7 +672,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat free grey_0: 7634013727912331279
+      Boat free grey_1: 290858671935970666
+      Boat free grey_10: 9163574033598588176
+      Boat free grey_11: -7863508973092683096
+      Boat free grey_12: -7861960623757688379
+      Boat free grey_13: -4042381422159615802
+      Boat free grey_14: -5647530650555975657
+      Boat free grey_15: -2058977466417182974
+      Boat free grey_16: -2043673199142438390
+      Boat free grey_17: -63011559405221868
+      Boat free grey_18: -9089316223284930070
+      Boat free grey_19: -6282182246751803460
+      Boat free grey_2: 722131840803971535
+      Boat free grey_20: 2331596897243272275
+      Boat free grey_21: 1210378613368854102
+      Boat free grey_3: 8595832773730742177
+      Boat free grey_4: 8642112584423542746
+      Boat free grey_5: 3589882179379488435
+      Boat free grey_6: -6112626007531018665
+      Boat free grey_7: 4966066780597898285
+      Boat free grey_8: 4544809695577690204
+      Boat free grey_9: 2668995691895961856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

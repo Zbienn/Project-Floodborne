@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat free plain Redish_0: 768005426424385625
+      Boat free plain Redish_1: 8275392307619992807
+      Boat free plain Redish_2: 5459081079838404879
+      Boat free plain Redish_3: -1437550327576711764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

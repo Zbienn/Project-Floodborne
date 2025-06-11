@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat free plain purple_0: 1408200204565826606
+      Boat free plain purple_1: -1979752278117465619
+      Boat free plain purple_2: -673278486980131988
+      Boat free plain purple_3: -2359159211080117192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

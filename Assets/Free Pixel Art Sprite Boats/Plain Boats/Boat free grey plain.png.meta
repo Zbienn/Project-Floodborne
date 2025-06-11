@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat free grey plain_0: -6597681657366623266
+      Boat free grey plain_1: 6017396720064629453
+      Boat free grey plain_2: 5896002666611833739
+      Boat free grey plain_3: -6074737246246498537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
