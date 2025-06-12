@@ -2161,6 +2161,10 @@ PrefabInstance:
       propertyPath: _healthUi
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6823340532553283743, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: _iFrameDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7070659693908790761, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09532741

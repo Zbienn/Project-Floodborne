@@ -10140,6 +10140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthData: {fileID: 11400000, guid: add75d8859018714181cf073994988d2, type: 2}
   _healthUi: {fileID: 8373807380130016560}
+  _iFrameDuration: 1
 --- !u!1 &6105367392818300140
 GameObject:
   m_ObjectHideFlags: 0
