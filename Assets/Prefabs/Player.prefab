@@ -104,7 +104,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6579348091653856306}
+  - {fileID: 1701300959029266391}
   m_Father: {fileID: 7070659693908790761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &135876684857093848
@@ -291,11 +293,11 @@ Transform:
   m_GameObject: {fileID: 1485721800626995323}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.29900002, y: -0.9190001, z: -0.053}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.09966668, y: -0.30633336, z: -0.053}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7070659693908790761}
+  m_Father: {fileID: 6014136631041445860}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &3512899602219524904
 ParticleSystem:
@@ -5199,11 +5201,11 @@ Transform:
   m_GameObject: {fileID: 3932340031924583049}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.269, y: -0.9190001, z: -0.053}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.089666665, y: -0.30633336, z: -0.053}
+  m_LocalScale: {x: 0.33333334, y: 1, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7070659693908790761}
+  m_Father: {fileID: 6014136631041445860}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &2686475592463457411
 ParticleSystem:
@@ -5280,7 +5282,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -5724,7 +5726,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.1415927
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -10038,8 +10040,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6579348091653856306}
-  - {fileID: 1701300959029266391}
   - {fileID: 6014136631041445860}
   - {fileID: 5439730241087003800}
   - {fileID: 6686559983830746428}
@@ -10312,7 +10312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -61.5}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 129.13, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8373807380130016560

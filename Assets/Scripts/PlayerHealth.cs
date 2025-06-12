@@ -2,12 +2,15 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private PlayerHealthData healthData;
     [SerializeField] private Slider _healthUi;
     private bool isInvulnerable = false;
+    [SerializeField] private float _iFrameDuration;
+
 
     void Awake()
     {
@@ -51,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator InvulnerabilityCoroutine()
     {
         isInvulnerable = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(_iFrameDuration);
         isInvulnerable = false;
     }
 }
