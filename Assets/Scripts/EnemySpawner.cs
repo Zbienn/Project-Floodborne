@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,21 +10,59 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Transform minSpawn, maxSpawn;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float despawnDistance;
+
+    private List<GameObject> spawnedEnemies = new();
+    [SerializeField] private int checksPerFrame;
+    private int enemyToCheck;
+
     void Start()
     {
         SpawnCounter = spawnCooldown;
+
+        despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 3f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         SpawnCounter -= Time.deltaTime;
         if (SpawnCounter <= 0)
         {
             SpawnCounter = spawnCooldown;
-            //Instantiate(enemyToSpawn, transform.position, transform.rotation);
-            Instantiate(enemyToSpawn, SelectSpawnPoint(), transform.rotation);
+            GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint(), transform.rotation);
+            spawnedEnemies.Add(newEnemy);
+        }
+
+        int checkTarget = enemyToCheck + checksPerFrame;
+
+        while (enemyToCheck < checkTarget)
+        {
+            if (enemyToCheck < spawnedEnemies.Count)
+            {
+                if (spawnedEnemies[enemyToCheck] != null)
+                {
+                    if(Vector3.Distance(transform.position, spawnedEnemies[enemyToCheck].transform.position) > despawnDistance)
+                    {
+                        Destroy(spawnedEnemies[enemyToCheck]);
+                        spawnedEnemies.RemoveAt(enemyToCheck);
+                        checkTarget--;
+                    }
+                    else
+                    {
+                        enemyToCheck++;
+                    }
+                }
+                else
+                {
+                    spawnedEnemies.RemoveAt(enemyToCheck);
+                    checkTarget--;
+                }
+            }
+            else
+            {
+                enemyToCheck = 0;
+                checkTarget = 0;
+            }
         }
     }
 

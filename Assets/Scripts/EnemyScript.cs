@@ -19,11 +19,19 @@ public class EnemyScript : MonoBehaviour
 
     void FixedUpdate()
     {
-
         Vector2 direction = ((Vector2)target.position - rb.position).normalized;
         rb.MovePosition(rb.position + data.Speed * Time.deltaTime * direction);
 
         if (direction.x != 0)
             spriteRenderer.flipX = direction.x < 0;
+    }
+
+    public void TakeDamage(float amount)
+    {
+        data.Health -= amount;
+        if(data.Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

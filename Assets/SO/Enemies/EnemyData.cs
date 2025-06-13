@@ -5,7 +5,7 @@ public class EnemyData : ScriptableObject
 {
     [SerializeField] private int damageAmount;
     [SerializeField] private float speed;
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float health;
 
     public int DamageAmount
     {
@@ -13,5 +13,5 @@ public class EnemyData : ScriptableObject
         set => damageAmount = Mathf.Max(0, value);
     }
     public float Speed { get => speed; set => speed = value; }
-    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public float Health { get => health; set => health = value; }
 }
