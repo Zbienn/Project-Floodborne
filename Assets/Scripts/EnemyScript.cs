@@ -7,6 +7,7 @@ public class EnemyScript : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private EnemyData data;
+    private float currentHealth;
 
     public int DamageAmount => data.DamageAmount;
 
@@ -15,6 +16,7 @@ public class EnemyScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("Player")?.transform;
+        currentHealth = data.MaxHealth;
     }
 
     void FixedUpdate()
@@ -28,8 +30,8 @@ public class EnemyScript : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        data.Health -= amount;
-        if(data.Health <= 0)
+        currentHealth -= amount;
+        if(currentHealth <= 0)
         {
             Destroy(gameObject);
         }
