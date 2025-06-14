@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDamager : MonoBehaviour
@@ -5,21 +6,41 @@ public class EnemyDamager : MonoBehaviour
 
     [SerializeField] private float baseDamage;
 
+    [SerializeField] private float duration;
+
+    private float growSpeed = 5f;
+    private Vector3 targetSize;
+
+    [SerializeField] private bool shouldKnockBack;
+
     void Start()
     {
         
+        targetSize = transform.localScale;
+        transform.localScale = Vector3.zero;
+
     }
 
     void Update()
     {
-        
+        transform.localScale = Vector3.MoveTowards(transform.localScale, targetSize, growSpeed * Time.deltaTime);
+
+        duration -= Time.deltaTime;
+        if (duration <= 0)
+        {
+            targetSize = Vector3.zero;
+            if (transform.localScale.x == 0f)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
         {
-            collision.GetComponent<EnemyScript>().TakeDamage(baseDamage);
+            collision.GetComponent<EnemyScript>().TakeDamage(baseDamage, shouldKnockBack);
         }
     }
 }
