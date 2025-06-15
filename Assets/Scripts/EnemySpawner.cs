@@ -16,21 +16,52 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int checksPerFrame;
     private int enemyToCheck;
 
+    [SerializeField] private List<WaveInfo> waves;
+    private int currentWave;
+    private float waveCounter;
+
     void Start()
     {
-        SpawnCounter = spawnCooldown;
+        //SpawnCounter = spawnCooldown;
 
         despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 3f;
+
+        currentWave = -1;
+        GoToNextWave();
+
+
     }
 
     void Update()
     {
-        SpawnCounter -= Time.deltaTime;
-        if (SpawnCounter <= 0)
+        /* SpawnCounter -= Time.deltaTime;
+         if (SpawnCounter <= 0)
+         {
+             SpawnCounter = spawnCooldown;
+             GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint(), transform.rotation);
+             spawnedEnemies.Add(newEnemy);
+         }*/
+
+        if (gameObject.activeSelf)
         {
-            SpawnCounter = spawnCooldown;
-            GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint(), transform.rotation);
-            spawnedEnemies.Add(newEnemy);
+            if (currentWave < waves.Count)
+            {
+                waveCounter -= Time.deltaTime;
+                if (waveCounter <= 0)
+                {
+                    GoToNextWave();
+                }
+
+                SpawnCounter -= Time.deltaTime;
+                if (SpawnCounter <= 0)
+                {
+                    SpawnCounter = waves[currentWave].TimeBetweenSpawns;
+
+                    GameObject newEnemy = Instantiate(waves[currentWave].EnemyToSpawn, SelectSpawnPoint(), Quaternion.identity);
+
+                    spawnedEnemies.Add(newEnemy);
+                }
+            }
         }
 
         int checkTarget = enemyToCheck + checksPerFrame;
@@ -98,4 +129,30 @@ public class EnemySpawner : MonoBehaviour
 
         return spawnPoint;
     }
+
+
+    public void GoToNextWave()
+    {
+        currentWave++;
+
+        if (currentWave >= waves.Count)
+        {
+            currentWave = waves.Count - 1;
+        }
+
+        waveCounter = waves[currentWave].WaveLength;
+        SpawnCounter = waves[currentWave].TimeBetweenSpawns;
+    }
+}
+
+[System.Serializable]
+public class WaveInfo
+{
+    [SerializeField] private GameObject enemyToSpawn;
+    [SerializeField] private float waveLength = 10f;
+    [SerializeField] private float timeBetweenSpawns = 1f;
+
+    public GameObject EnemyToSpawn { get => enemyToSpawn; set => enemyToSpawn = value; }
+    public float WaveLength { get => waveLength; set => waveLength = value; }
+    public float TimeBetweenSpawns { get => timeBetweenSpawns; set => timeBetweenSpawns = value; }
 }
