@@ -15,6 +15,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private float knockBackTime = 0.5f;
     private float knockBackCounter;
 
+    [SerializeField] private DamageNumberController damageNumberController;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,14 +48,6 @@ public class EnemyScript : MonoBehaviour
             spriteRenderer.flipX = direction.x < 0;
     }
 
-    public void TakeDamage(float amount)
-    {
-        currentHealth -= amount;
-        if(currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void TakeDamage(float amount, bool shouldKnockBack)
     {
@@ -63,6 +57,7 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        DamageNumberController.instance.SpawnDamage(amount, transform.position);
         if (shouldKnockBack)
         {
             knockBackCounter = knockBackTime;
