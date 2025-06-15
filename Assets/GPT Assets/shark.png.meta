@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 12e3dd5bf612b31409bfbc23330749dc
+guid: 43c30cc685a6faa4783fc5819600b28e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4058254702925930087
-    second: Bones_SingleSkull_Fly_0
+      213: 8861480726252175340
+    second: shark_0
   - first:
-      213: 1438289987400495239
-    second: Bones_SingleSkull_Fly_1
+      213: 1264198412648948291
+    second: shark_1
   - first:
-      213: 4784100166936662140
-    second: Bones_SingleSkull_Fly_2
+      213: -3458475165036144408
+    second: shark_2
   - first:
-      213: -2837967834670498393
-    second: Bones_SingleSkull_Fly_3
+      213: 4296132087221375652
+    second: shark_3
   - first:
-      213: -8910987609444008887
-    second: Bones_SingleSkull_Fly_4
+      213: -4162168162517213045
+    second: shark_4
   - first:
-      213: -2093020775249833328
-    second: Bones_SingleSkull_Fly_5
+      213: 71430130184613482
+    second: shark_5
   - first:
-      213: -5234458825987850488
-    second: Bones_SingleSkull_Fly_6
+      213: -4918765393237131035
+    second: shark_6
   - first:
-      213: -4807177847907190495
-    second: Bones_SingleSkull_Fly_7
+      213: -8033116378216745843
+    second: shark_7
+  - first:
+      213: 6900243427456055192
+    second: shark_8
+  - first:
+      213: 1128524117273375277
+    second: shark_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_0
+      name: shark_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 91
-        width: 9
-        height: 11
+        x: 18
+        y: 506
+        width: 176
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76e55f79621d15830800000000000000
-      internalID: 4058254702925930087
+      spriteID: cef3b3835cd4afa70800000000000000
+      internalID: 8861480726252175340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_1
+      name: shark_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 92
-        width: 9
-        height: 12
+        x: 218
+        y: 506
+        width: 176
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 780f1078f15d5f310800000000000000
-      internalID: 1438289987400495239
+      spriteID: 342ad8f12c55b8110800000000000000
+      internalID: 1264198412648948291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_2
+      name: shark_2
       rect:
         serializedVersion: 2
-        x: 163
-        y: 93
-        width: 9
-        height: 11
+        x: 14
+        y: 368
+        width: 180
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c70952c21c9846240800000000000000
-      internalID: 4784100166936662140
+      spriteID: 8e8928349270100d0800000000000000
+      internalID: -3458475165036144408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_3
+      name: shark_3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 92
-        width: 10
-        height: 12
+        x: 218
+        y: 371
+        width: 176
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7adfa726a438d98d0800000000000000
-      internalID: -2837967834670498393
+      spriteID: 4a2dcf61f5dee9b30800000000000000
+      internalID: 4296132087221375652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_4
+      name: shark_4
       rect:
         serializedVersion: 2
-        x: 37
-        y: 27
-        width: 10
-        height: 12
+        x: 14
+        y: 245
+        width: 181
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94cbe2d4bffc55480800000000000000
-      internalID: -8910987609444008887
+      spriteID: b80a8b9bb120d36c0800000000000000
+      internalID: -4162168162517213045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_5
+      name: shark_5
       rect:
         serializedVersion: 2
-        x: 100
-        y: 27
-        width: 9
-        height: 11
+        x: 214
+        y: 245
+        width: 180
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09298b7b1b814f2e0800000000000000
-      internalID: -2093020775249833328
+      spriteID: a6ee9ef2355cdf000800000000000000
+      internalID: 71430130184613482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_6
+      name: shark_6
       rect:
         serializedVersion: 2
-        x: 158
-        y: 26
-        width: 9
-        height: 12
+        x: 14
+        y: 120
+        width: 182
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80ff59d5e677b57b0800000000000000
-      internalID: -5234458825987850488
+      spriteID: 5e0cd928fe80dbbb0800000000000000
+      internalID: -4918765393237131035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bones_SingleSkull_Fly_7
+      name: shark_7
       rect:
         serializedVersion: 2
-        x: 221
-        y: 27
-        width: 9
-        height: 11
+        x: 215
+        y: 121
+        width: 178
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +309,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1297d538739794db0800000000000000
-      internalID: -4807177847907190495
+      spriteID: d84b40d1733a48090800000000000000
+      internalID: -8033116378216745843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 180
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897fd3596d692cf50800000000000000
+      internalID: 6900243427456055192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shark_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 5
+        width: 180
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d227a8a94b259af00800000000000000
+      internalID: 1128524117273375277
       vertices: []
       indices: 
       edges: []
@@ -322,15 +372,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bones_SingleSkull_Fly_0: 4058254702925930087
-      Bones_SingleSkull_Fly_1: 1438289987400495239
-      Bones_SingleSkull_Fly_2: 4784100166936662140
-      Bones_SingleSkull_Fly_3: -2837967834670498393
-      Bones_SingleSkull_Fly_4: -8910987609444008887
-      Bones_SingleSkull_Fly_5: -2093020775249833328
-      Bones_SingleSkull_Fly_6: -5234458825987850488
-      Bones_SingleSkull_Fly_7: -4807177847907190495
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
