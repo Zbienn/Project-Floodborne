@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718540951}
   - component: {fileID: 718540952}
+  - component: {fileID: 718540954}
   m_Layer: 0
   m_Name: PickUpRange
   m_TagString: Untagged
@@ -271,6 +272,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &718540954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718540950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c64a4f089d986418e526b856320d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsData: {fileID: 11400000, guid: 5d84cef268bda414fbd931f0aeb92ab1, type: 2}
 --- !u!1 &1306149343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7542803497575721999, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}

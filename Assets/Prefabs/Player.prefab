@@ -4969,7 +4969,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 167560891
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14774,18 +14774,23 @@ MonoBehaviour:
   - enemyToSpawn: {fileID: 4227050055373810918, guid: 93c3a2adb7860f943914464bdc57bb81, type: 3}
     waveLength: 10
     timeBetweenSpawns: 0.5
+    xpPickupToDrop: {fileID: 2847629250891654279, guid: 533bcd6821bc5ae49b595ff99e644d0a, type: 3}
   - enemyToSpawn: {fileID: 4384881780985777238, guid: edf3c0a72b2eb3c44a0e6097c4ce972d, type: 3}
     waveLength: 10
     timeBetweenSpawns: 0.5
+    xpPickupToDrop: {fileID: 2847629250891654279, guid: 533bcd6821bc5ae49b595ff99e644d0a, type: 3}
   - enemyToSpawn: {fileID: 6195313201556164942, guid: 19c07c0e76161494faf095c90d946ec0, type: 3}
     waveLength: 10
     timeBetweenSpawns: 0.5
+    xpPickupToDrop: {fileID: 4644821259686732622, guid: c7cae6aaec53acc44b9b342e81bb784e, type: 3}
   - enemyToSpawn: {fileID: 76477893251818230, guid: 848197405d511214783545ae0357a66f, type: 3}
     waveLength: 10
     timeBetweenSpawns: 0.5
+    xpPickupToDrop: {fileID: 4644821259686732622, guid: c7cae6aaec53acc44b9b342e81bb784e, type: 3}
   - enemyToSpawn: {fileID: 62746749334015315, guid: ef62e3cfcefc6324a9c04058010532e1, type: 3}
     waveLength: 10
     timeBetweenSpawns: 0.5
+    xpPickupToDrop: {fileID: 4644821259686732622, guid: c7cae6aaec53acc44b9b342e81bb784e, type: 3}
 --- !u!1 &3067207407744276040
 GameObject:
   m_ObjectHideFlags: 0
@@ -15181,7 +15186,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 167560891
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2704322010331973617, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15341,6 +15346,88 @@ Transform:
   - {fileID: 4623424345396162375}
   m_Father: {fileID: 6070042470813286810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7318937975249421260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4499744644398661186}
+  - component: {fileID: 2307078627780202918}
+  - component: {fileID: 8182216979818121632}
+  m_Layer: 0
+  m_Name: PickUpRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4499744644398661186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318937975249421260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6070042470813286810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2307078627780202918
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318937975249421260}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &8182216979818121632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318937975249421260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c64a4f089d986418e526b856320d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsData: {fileID: 11400000, guid: 5d84cef268bda414fbd931f0aeb92ab1, type: 2}
 --- !u!1 &7486817606643160248
 GameObject:
   m_ObjectHideFlags: 0
@@ -15440,6 +15527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6070042470813286810}
   - component: {fileID: 1258618571261039049}
+  - component: {fileID: 2362048327687744577}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -15465,6 +15553,7 @@ Transform:
   - {fileID: 9054622609227720614}
   - {fileID: 5663711855232426781}
   - {fileID: 2220619991465890521}
+  - {fileID: 4499744644398661186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1258618571261039049
@@ -15483,6 +15572,19 @@ MonoBehaviour:
   spriteTransform: {fileID: 6973385039332722918}
   leftTrailParticles: {fileID: 4124976040725804378}
   rightTrailParticles: {fileID: 5427597990652561197}
+--- !u!114 &2362048327687744577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542803497575721999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40285c6735608b445b2cb8ffb2074698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerExperience: {fileID: 11400000, guid: 2431533a818de024282fb44d5967b46d, type: 2}
 --- !u!1 &9029565628599322464
 GameObject:
   m_ObjectHideFlags: 0
@@ -15561,7 +15663,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 167560891
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2985409896421829575, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

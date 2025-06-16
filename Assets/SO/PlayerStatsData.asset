@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f82b8836b6a074cbb8545135cefc92, type: 3}
   m_Name: PlayerStatsData
   m_EditorClassIdentifier: 
+  pickupRange: 3
