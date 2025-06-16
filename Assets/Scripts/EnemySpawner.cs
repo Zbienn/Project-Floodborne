@@ -58,8 +58,14 @@ public class EnemySpawner : MonoBehaviour
                     SpawnCounter = waves[currentWave].TimeBetweenSpawns;
 
                     GameObject newEnemy = Instantiate(waves[currentWave].EnemyToSpawn, SelectSpawnPoint(), Quaternion.identity);
-
                     spawnedEnemies.Add(newEnemy);
+
+                    
+                    EnemyXPDropper dropper = newEnemy.GetComponent<EnemyXPDropper>();
+                    if (dropper != null)
+                    {
+                        dropper.SetXPPickup(waves[currentWave].XpPickupToDrop);
+                    }
                 }
             }
         }
@@ -151,8 +157,10 @@ public class WaveInfo
     [SerializeField] private GameObject enemyToSpawn;
     [SerializeField] private float waveLength = 10f;
     [SerializeField] private float timeBetweenSpawns = 1f;
+    [SerializeField] private GameObject xpPickupToDrop;
 
-    public GameObject EnemyToSpawn { get => enemyToSpawn; set => enemyToSpawn = value; }
-    public float WaveLength { get => waveLength; set => waveLength = value; }
-    public float TimeBetweenSpawns { get => timeBetweenSpawns; set => timeBetweenSpawns = value; }
+    public GameObject EnemyToSpawn => enemyToSpawn;
+    public float WaveLength => waveLength;
+    public float TimeBetweenSpawns => timeBetweenSpawns;
+    public GameObject XpPickupToDrop => xpPickupToDrop;
 }

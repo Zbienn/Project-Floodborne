@@ -14770,6 +14770,22 @@ MonoBehaviour:
   minSpawn: {fileID: 670652294057344663}
   maxSpawn: {fileID: 805046017638591714}
   checksPerFrame: 30
+  waves:
+  - enemyToSpawn: {fileID: 4227050055373810918, guid: 93c3a2adb7860f943914464bdc57bb81, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 4384881780985777238, guid: edf3c0a72b2eb3c44a0e6097c4ce972d, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 6195313201556164942, guid: 19c07c0e76161494faf095c90d946ec0, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 76477893251818230, guid: 848197405d511214783545ae0357a66f, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 62746749334015315, guid: ef62e3cfcefc6324a9c04058010532e1, type: 3}
+    waveLength: 10
+    timeBetweenSpawns: 0.5
 --- !u!1 &3067207407744276040
 GameObject:
   m_ObjectHideFlags: 0

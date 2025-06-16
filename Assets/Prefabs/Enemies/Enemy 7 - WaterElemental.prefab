@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4892161965130750976}
   - component: {fileID: 486677953669740240}
   - component: {fileID: 6080040191519922503}
+  - component: {fileID: 4878535226086536123}
   m_Layer: 0
   m_Name: Enemy 7 - WaterElemental
   m_TagString: Enemy
@@ -191,3 +192,15 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: b23680671e732aa4f98aed03c3bc9686, type: 2}
   knockBackTime: 0.5
   damageNumberController: {fileID: 5610653664694526348, guid: d4148799f6eba4743b12f795ece65ef3, type: 3}
+--- !u!114 &4878535226086536123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142131012051921497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c45dd1249860b24b9e98fb7fbfcf36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

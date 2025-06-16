@@ -52,15 +52,24 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage(float amount, bool shouldKnockBack)
     {
         currentHealth -= amount;
+
         if (currentHealth <= 0)
         {
+            EnemyXPDropper dropper = GetComponent<EnemyXPDropper>();
+            if (dropper != null)
+            {
+                dropper.DropXP();
+            }
+
             Destroy(gameObject);
         }
 
         DamageNumberController.instance.SpawnDamage(amount, transform.position);
+
         if (shouldKnockBack)
         {
             knockBackCounter = knockBackTime;
         }
     }
+
 }
