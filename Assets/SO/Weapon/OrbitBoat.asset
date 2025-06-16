@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3b26223f0f85541a91a66ee937aab9, type: 3}
+  m_Name: OrbitBoat
+  m_EditorClassIdentifier: 
+  weaponName: Orbit Boat
+  weaponPrefab: {fileID: 6630328566629857646, guid: 1f2ecf9e1763b844cb11f38e3b616d39, type: 3}
+  weaponIcon: {fileID: -2704322010331973617, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
+  levels:
+  - damage: 5
+    cooldown: 4
+    duration: 3
+    speed: 3
+    amount: 1
+    areaSize: 1
+    description: Boats circle the player
+  - damage: 10
+    cooldown: 6
+    duration: 3
+    speed: 3
+    amount: 1
+    areaSize: 1
+    description: + Damage
+  - damage: 20
+    cooldown: 6
+    duration: 4
+    speed: 3
+    amount: 1
+    areaSize: 1
+    description: '+ Damage
+
+      + Duration'
