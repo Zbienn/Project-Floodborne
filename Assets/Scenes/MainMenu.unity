@@ -2149,6 +2149,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2089453521024629103, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4382674655501008535, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2217,6 +2221,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6105367392818300140, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
     - {fileID: 144957908768541972, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+    - {fileID: 4202683211961698133, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+    - {fileID: 2774657937945911074, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+    - {fileID: 6398152028368824601, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+    - {fileID: 7318937975249421260, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+    - {fileID: 249705584945021080, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
