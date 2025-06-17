@@ -15,6 +15,10 @@ public class EnemyDamager : MonoBehaviour
 
     [SerializeField] private bool destroyParent;
 
+    public float BaseDamage { get => baseDamage; set => baseDamage = Mathf.Max(0f, value); }
+    public float Duration { get => duration; set => duration = Mathf.Max(0f, value); }
+    public float GrowSpeed { get => growSpeed; set => growSpeed = Mathf.Max(0f, value); }
+
     void Start()
     {
         

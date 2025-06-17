@@ -2153,6 +2153,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4124976040725804378, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: ShapeModule.arc.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124976040725804378, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4382674655501008535, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2160,6 +2168,14 @@ PrefabInstance:
     - target: {fileID: 5221441751170375020, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427597990652561197, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: ShapeModule.arc.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427597990652561197, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6823340532553283743, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: _healthUi
@@ -2216,6 +2232,26 @@ PrefabInstance:
     - target: {fileID: 7079178611842062519, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841140786980668067, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841140786980668067, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896976859653691518, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896976859653691518, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896976859653691518, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
