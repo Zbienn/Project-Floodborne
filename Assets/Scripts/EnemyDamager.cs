@@ -1,26 +1,32 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDamager : MonoBehaviour
 {
-    public float damage;
-    private float duration;
-    public bool shouldKnockBack;
-    public bool destroyParent;
+
+    [SerializeField] private float baseDamage;
+
+    [SerializeField] private float duration;
 
     private float growSpeed = 5f;
     private Vector3 targetSize;
 
+    [SerializeField] private bool shouldKnockBack;
+
+    [SerializeField] private bool destroyParent;
+
     void Start()
     {
+        
         targetSize = transform.localScale;
         transform.localScale = Vector3.zero;
-        // remover esta linha:
-        // duration = weaponData.Duration;
+
     }
 
     void Update()
     {
         transform.localScale = Vector3.MoveTowards(transform.localScale, targetSize, growSpeed * Time.deltaTime);
+
         duration -= Time.deltaTime;
         if (duration <= 0)
         {
@@ -28,21 +34,20 @@ public class EnemyDamager : MonoBehaviour
             if (transform.localScale.x == 0f)
             {
                 Destroy(gameObject);
+
+                if (destroyParent)
+                {
+                    Destroy(transform.parent.gameObject);
+                }
             }
         }
     }
 
-    public void SetStats(float damage, float duration)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        this.damage = damage;
-        this.duration = duration;
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
+        if(collision.tag == "Enemy")
         {
-            collision.GetComponent<EnemyScript>().TakeDamage(damage, shouldKnockBack);
+            collision.GetComponent<EnemyScript>().TakeDamage(baseDamage, shouldKnockBack);
         }
     }
 }

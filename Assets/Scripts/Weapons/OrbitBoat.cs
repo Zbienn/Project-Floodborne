@@ -1,39 +1,28 @@
 using UnityEngine;
 
-public class OrbitBoat : Weapon
+public class OrbitBoat : MonoBehaviour
 {
     [SerializeField] private float rotateSpeed;
-    [SerializeField] private Transform holder;
-    [SerializeField] private GameObject boatToSpawn;
-    [SerializeField] private float spawnDistance = 2f;
+    [SerializeField] private Transform holder, boatToSpawn;
 
+    [SerializeField] private float cooldown;
     private float spawnCounter;
+
+    void Start()
+    {
+        
+    }
 
     void Update()
     {
-        if (holder == null) return;
-
-        holder.Rotate(0f, 0f, rotateSpeed * Time.deltaTime);
+        holder.rotation = Quaternion.Euler(0F, 0F, holder.rotation.eulerAngles.z + (rotateSpeed*Time.deltaTime));
 
         spawnCounter -= Time.deltaTime;
-        if (spawnCounter <= 0f)
+        if (spawnCounter <= 0)
         {
-            spawnCounter = currentStats.Cooldown;
+            spawnCounter = cooldown;
 
-            if (boatToSpawn != null)
-            {
-                GameObject boat = Instantiate(boatToSpawn, holder);
-                boat.transform.localPosition = new Vector3(spawnDistance, 0f, 0f);
-                boat.transform.localRotation = Quaternion.identity;
-                boat.SetActive(true);
-
-                EnemyDamager damager = boat.GetComponent<EnemyDamager>();
-                if (damager != null)
-                {
-                    damager.SetStats(currentStats.Damage, currentStats.Duration);
-                }
-
-            }
+            Instantiate(boatToSpawn, boatToSpawn.position, boatToSpawn.rotation, holder).gameObject.SetActive(true);
         }
     }
 }

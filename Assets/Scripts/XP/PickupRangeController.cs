@@ -15,7 +15,7 @@ public class PickupRangeController : MonoBehaviour
 
     private void Update()
     {
-        if (Mathf.Abs(statsData.PickupRange - lastPickupRange) > 0.01f)
+        if (Mathf.Abs(statsData.PickupRange - lastPickupRange) > 0f || Mathf.Abs(statsData.PickupRange - lastPickupRange) < 0f)
         {
             lastPickupRange = statsData.PickupRange;
             rangeCollider.radius = lastPickupRange;
