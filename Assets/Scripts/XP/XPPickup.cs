@@ -8,6 +8,14 @@ public class XPPickup : MonoBehaviour
     private bool isBeingPulled = false;
     private float pullSpeed = 8f;
 
+    private PlayerWeapon playerWeapon;
+
+    void Start()
+    {
+        if (playerWeapon == null)
+            playerWeapon = FindFirstObjectByType<PlayerWeapon>();
+    }
+
     private void Update()
     {
         if (isBeingPulled && target != null)
@@ -20,7 +28,7 @@ public class XPPickup : MonoBehaviour
                 {
                     bool leveledUp = playerExperience.AddXP(xpAmount);
                     if (leveledUp)
-                        Debug.Log("Level Up!");
+                        LeveledUp();
                 }
 
                 Destroy(gameObject);
@@ -35,5 +43,12 @@ public class XPPickup : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player").transform;
             isBeingPulled = true;
         }
+    }
+
+    void LeveledUp()
+    {
+        Debug.Log("Level Up!");
+        playerWeapon.ActiveWeapon.LevelUp();
+
     }
 }

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +5,20 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private List<WeaponStats> stats;
     [SerializeField] private int weaponLevel;
+    private bool statsUpdated;
 
     public List<WeaponStats> Stats => stats;
     public int WeaponLevel => weaponLevel;
+    public bool StatsUpdated { get => statsUpdated; set => statsUpdated = value; }
+
+    public void LevelUp()
+    {
+        if (weaponLevel < stats.Count - 1)
+        {
+            weaponLevel++;
+            statsUpdated = true;
+        }
+    }
 }
 
 

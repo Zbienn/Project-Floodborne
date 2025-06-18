@@ -29,6 +29,12 @@ public class OrbitBoat : Weapon
 
             Instantiate(boatToSpawn, boatToSpawn.position, boatToSpawn.rotation, holder).gameObject.SetActive(true);
         }
+
+        if(StatsUpdated == true)
+        {
+            StatsUpdated = false;
+            SetStats();
+        }
     }
 
     public void SetStats()

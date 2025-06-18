@@ -167,3 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpAmount: 9
   playerExperience: {fileID: 11400000, guid: 2431533a818de024282fb44d5967b46d, type: 2}
+  playerWeapon: {fileID: 4813763962220207532, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}

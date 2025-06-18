@@ -5049,10 +5049,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8dfc2f7af0c51d44b184897c6614cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+  - speed: 1
+    damage: 10
+    range: 1
+    timeBetweenAttacks: 6
+    amount: 1
+    duration: 4
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  - speed: 0
+    damage: 0
+    range: 0
+    timeBetweenAttacks: 0
+    amount: 0
+    duration: 0
+  weaponLevel: 0
   rotateSpeed: 270
   holder: {fileID: 916612249565012762}
   boatToSpawn: {fileID: 4687776066686683303}
   cooldown: 6
+  damager: {fileID: 7636863845907176374}
 --- !u!1 &2363859793011492210
 GameObject:
   m_ObjectHideFlags: 0
@@ -15528,6 +15573,7 @@ GameObject:
   - component: {fileID: 6070042470813286810}
   - component: {fileID: 1258618571261039049}
   - component: {fileID: 2362048327687744577}
+  - component: {fileID: 4813763962220207532}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -15585,6 +15631,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerExperience: {fileID: 11400000, guid: 2431533a818de024282fb44d5967b46d, type: 2}
+--- !u!114 &4813763962220207532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542803497575721999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1e05ee9e579c24aac1b3dbbf9da433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeWeapon: {fileID: 2089431960774475303}
 --- !u!1 &9029565628599322464
 GameObject:
   m_ObjectHideFlags: 0
