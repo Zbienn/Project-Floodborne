@@ -23350,7 +23350,7 @@ PrefabInstance:
       objectReference: {fileID: 866107876}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[0].range
@@ -23394,11 +23394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].range
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].range
@@ -23454,7 +23454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].damage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].amount
@@ -23486,7 +23486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].duration
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].duration
@@ -23510,6 +23510,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[4].upgradeText
+      value: Full Upgraded
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+      propertyPath: stats.Array.data[5].upgradeText
       value: Full Upgraded
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
