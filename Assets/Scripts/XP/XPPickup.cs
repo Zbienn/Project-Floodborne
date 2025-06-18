@@ -54,6 +54,10 @@ public class XPPickup : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        uiController.LevelUpButtons[1].UpdateButtonDisplay(playerWeapon.ActiveWeapon);
+        //uiController.LevelUpButtons[1].UpdateButtonDisplay(playerWeapon.ActiveWeapon);
+        uiController.LevelUpButtons[0].UpdateButtonDisplay(playerWeapon.CurrentWeapons[0]);
+        uiController.LevelUpButtons[1].UpdateButtonDisplay(playerWeapon.UnassignedWeapons[0]);
+        uiController.LevelUpButtons[2].UpdateButtonDisplay(playerWeapon.UnassignedWeapons[1]);
+
     }
 }

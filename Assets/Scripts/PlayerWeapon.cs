@@ -1,8 +1,35 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [SerializeField] private Weapon activeWeapon;
+    //[SerializeField] private Weapon activeWeapon;
 
-    public Weapon ActiveWeapon { get => activeWeapon; set => activeWeapon = value; }
+    [SerializeField] private List<Weapon> unassignedWeapons, currentWeapons;
+
+    public List<Weapon> UnassignedWeapons { get => unassignedWeapons; set => unassignedWeapons = value; }
+    public List<Weapon> CurrentWeapons { get => currentWeapons; set => currentWeapons = value; }
+
+    private void Start()
+    {
+        AddWeapon(Random.Range(0, unassignedWeapons.Count));
+    }
+
+    public void AddWeapon(int weaponNum)
+    {
+        if (weaponNum < unassignedWeapons.Count)
+        {
+            currentWeapons.Add(unassignedWeapons[weaponNum]);
+
+            unassignedWeapons[weaponNum].gameObject.SetActive(true);
+            unassignedWeapons.RemoveAt(weaponNum);
+        }
+    }
+
+    public void AddWeapon(Weapon weaponToAdd)
+    {
+        weaponToAdd.gameObject.SetActive(true);
+        currentWeapons.Add(weaponToAdd);
+        unassignedWeapons.Remove(weaponToAdd);
+    }
 }
