@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - BGWater
   - 
   - 
   - 
@@ -40,11 +40,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 524437977
+  - name: BGWater
+    uniqueID: 3344567359
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 167560891
     locked: 0
   - name: PickUps
     uniqueID: 2825101333
@@ -52,11 +55,12 @@ TagManager:
   - name: Enemies
     uniqueID: 1175090293
     locked: 0
-  - name: Player
-    uniqueID: 167560891
-    locked: 0
   - name: UI
     uniqueID: 2598057125
     locked: 0
+  - name: Background
+    uniqueID: 524437977
+    locked: 0
   m_RenderingLayers:
   - Default
+  - BGWater

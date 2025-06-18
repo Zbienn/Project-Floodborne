@@ -11,6 +11,13 @@ public class ExperienceUIController : MonoBehaviour
     [SerializeField] private Slider xpSlider;
     [SerializeField] private TMP_Text levelText;
 
+    [Header("Level UP buttons")]
+    [SerializeField] private LevelUpSelectionButton[] levelUpButtons;
+    [SerializeField] private GameObject levelUpPanel;
+
+    public LevelUpSelectionButton[] LevelUpButtons { get => levelUpButtons; set => levelUpButtons = value; }
+    public GameObject LevelUpPanel { get => levelUpPanel; set => levelUpPanel = value; }
+
     void Start()
     {
         UpdateUI();

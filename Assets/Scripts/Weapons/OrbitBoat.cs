@@ -11,6 +11,8 @@ public class OrbitBoat : Weapon
 
     [SerializeField] private EnemyDamager damager;
 
+    [SerializeField] ExperienceUIController uiController;
+
     void Start()
     {
         SetStats();

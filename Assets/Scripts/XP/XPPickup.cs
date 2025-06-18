@@ -8,12 +8,14 @@ public class XPPickup : MonoBehaviour
     private bool isBeingPulled = false;
     private float pullSpeed = 8f;
 
+    private ExperienceUIController uiController;
     private PlayerWeapon playerWeapon;
 
     void Start()
     {
-        if (playerWeapon == null)
-            playerWeapon = FindFirstObjectByType<PlayerWeapon>();
+        if (uiController == null)
+            uiController = FindFirstObjectByType<ExperienceUIController>();
+        if (playerWeapon == null) playerWeapon = FindFirstObjectByType<PlayerWeapon>();
     }
 
     private void Update()
@@ -48,7 +50,10 @@ public class XPPickup : MonoBehaviour
     void LeveledUp()
     {
         Debug.Log("Level Up!");
-        playerWeapon.ActiveWeapon.LevelUp();
+        uiController.LevelUpPanel.SetActive(true);
 
+        Time.timeScale = 0f;
+
+        uiController.LevelUpButtons[1].UpdateButtonDisplay(playerWeapon.ActiveWeapon);
     }
 }
