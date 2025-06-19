@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - BGWater
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -46,14 +46,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 167560891
-    locked: 0
   - name: PickUps
     uniqueID: 2825101333
     locked: 0
   - name: Enemies
     uniqueID: 1175090293
+    locked: 0
+  - name: Weapons
+    uniqueID: 4163237067
+    locked: 0
+  - name: Player
+    uniqueID: 167560891
     locked: 0
   - name: UI
     uniqueID: 2598057125

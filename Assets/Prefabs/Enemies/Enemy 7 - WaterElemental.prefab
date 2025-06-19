@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 486677953669740240}
   - component: {fileID: 6080040191519922503}
   - component: {fileID: 4878535226086536123}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 7 - WaterElemental
   m_TagString: Enemy
   m_Icon: {fileID: 0}

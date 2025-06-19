@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1556388837691180035}
   - component: {fileID: 6540028183374056927}
   - component: {fileID: 3835886225761758072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 5 - BlueSlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b23680671e732aa4f98aed03c3bc9686, type: 2}
   knockBackTime: 0.5
-  damageNumberController: {fileID: 5610653664694526348, guid: d4148799f6eba4743b12f795ece65ef3, type: 3}
+  damageNumberController: {fileID: 0}
 --- !u!114 &3835886225761758072
 MonoBehaviour:
   m_ObjectHideFlags: 0

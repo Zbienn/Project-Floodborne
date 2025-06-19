@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class EnemyDamager : MonoBehaviour
     private float damageCounter;
 
     private List<EnemyScript> enemiesInRange = new List<EnemyScript>();
+    [SerializeField] private bool destroyOnImpact;
 
     public float BaseDamage { get => baseDamage; set => baseDamage = Mathf.Max(0f, value); }
     public float Duration { get => duration; set => duration = Mathf.Max(0f, value); }
@@ -85,6 +87,11 @@ public class EnemyDamager : MonoBehaviour
             if(collision.tag == "Enemy")
             {
                 collision.GetComponent<EnemyScript>().TakeDamage(baseDamage, shouldKnockBack);
+
+                if(destroyOnImpact)
+                {
+                    Destroy(gameObject);
+                }
             }
 
         } else

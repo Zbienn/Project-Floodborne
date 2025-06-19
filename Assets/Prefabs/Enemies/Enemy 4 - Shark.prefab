@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4035104189048946893}
   - component: {fileID: 40133515251129728}
   - component: {fileID: 5869594363584898692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 4 - Shark
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b23680671e732aa4f98aed03c3bc9686, type: 2}
   knockBackTime: 0.5
-  damageNumberController: {fileID: 5610653664694526348, guid: d4148799f6eba4743b12f795ece65ef3, type: 3}
+  damageNumberController: {fileID: 0}
 --- !u!70 &40133515251129728
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
