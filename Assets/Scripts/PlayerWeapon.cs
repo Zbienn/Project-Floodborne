@@ -16,7 +16,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Start()
     {
-        AddWeapon(Random.Range(0, unassignedWeapons.Count));
+        if(currentWeapons.Count == 0) AddWeapon(Random.Range(0, unassignedWeapons.Count));
     }
 
     public void AddWeapon(int weaponNum)

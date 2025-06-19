@@ -102,9 +102,4 @@ public class XPPickup : MonoBehaviour
 
     }
 
-    public void SkipLevelUp()
-    {
-        uiController.LevelUpPanel.gameObject.SetActive(false);
-        Time.timeScale = 1f;
-    }
 }
