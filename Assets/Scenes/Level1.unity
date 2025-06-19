@@ -6090,12 +6090,12 @@ GameObject:
   - component: {fileID: 519437080}
   - component: {fileID: 519437081}
   m_Layer: 0
-  m_Name: Giant Sword
+  m_Name: Sword Style
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &519437080
 Transform:
   m_ObjectHideFlags: 0
@@ -6164,12 +6164,12 @@ MonoBehaviour:
     damage: 15
     range: 1.2
     timeBetweenAttacks: 1.75
-    amount: 2
+    amount: 5
     duration: 1
     upgradeText: +Duration
-  weaponLevel: 0
+  weaponLevel: 1
   icon: {fileID: 906671935, guid: 0c50b2b3c323f0446b4c91bcc579aa9b, type: 3}
-  damager: {fileID: 0}
+  damager: {fileID: 1746642041}
 --- !u!1 &579040239
 GameObject:
   m_ObjectHideFlags: 0
@@ -28400,10 +28400,9 @@ MonoBehaviour:
   - {fileID: 1101687431}
   - {fileID: 1945140537}
   - {fileID: 686108755}
-  - {fileID: 1448583422}
-  - {fileID: 787869211}
-  currentWeapons:
   - {fileID: 519437081}
+  - {fileID: 787869211}
+  currentWeapons: []
   maxWeapons: 3
 --- !u!1 &1326150644
 GameObject:

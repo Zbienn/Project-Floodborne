@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class CloseAttackWeapon : Weapon
 {
@@ -25,16 +26,24 @@ public class CloseAttackWeapon : Weapon
         {
             attackCounter = Stats[WeaponLevel].TimeBetweenAttacks;
 
-            if(Input.GetAxisRaw("Horizontal") != 0)
+
+            direction = Input.GetAxisRaw("Horizontal");
+            if (direction != 0)
             {
-                if(Input.GetAxisRaw("Horizontal") > 0)
+                if(direction > 0)
                 {
                     damager.transform.rotation = Quaternion.identity;
                 } else
                 {
                     damager.transform.rotation = Quaternion.Euler(0f, 0f, 180f); 
                 }
-                Instantiate(damager, damager.transform.position, damager.transform.rotation, transform).gameObject.SetActive(true);
+            }
+
+            Instantiate(damager, damager.transform.position, damager.transform.rotation, transform).gameObject.SetActive(true);
+            for (int i = 1; i < Stats[WeaponLevel].Amount; i++)
+            {
+                float newRotation = (360 / Stats[WeaponLevel].Amount) * i;
+                Instantiate(damager, damager.transform.position, Quaternion.Euler(0f, 0f, damager.transform.eulerAngles.z + newRotation), transform).gameObject.SetActive(true);
             }
         }
     }
