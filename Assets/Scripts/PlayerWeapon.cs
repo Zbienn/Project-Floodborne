@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    //[SerializeField] private Weapon activeWeapon;
-
     [SerializeField] private List<Weapon> unassignedWeapons, currentWeapons;
     [SerializeField] private int maxWeapons = 3;
     private List<Weapon> fullyLeveledWeapons = new List<Weapon>();

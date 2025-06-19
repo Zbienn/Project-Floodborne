@@ -1,0 +1,56 @@
+using UnityEngine;
+
+public class CoinPickUp : MonoBehaviour
+{
+    [SerializeField] private int coinAmount = 1;
+
+    private bool movingToPlayer;
+    [SerializeField] private float moveSpeed;
+
+    [SerializeField] private float timeBetweenChecks = 2f;
+    [SerializeField] private float pickupRange;
+    private float checkCounter;
+
+    private PlayerMover player;
+    private CoinController coinController;
+
+    void Start()
+    {
+        if (player == null) player = FindFirstObjectByType<PlayerMover>();
+        if (coinController == null) coinController = FindFirstObjectByType<CoinController>();
+    }
+
+    void Update()
+    {
+        if(movingToPlayer == true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+        } else
+        {
+            checkCounter -= Time.deltaTime;
+            if(checkCounter <= 0 )
+            {
+                checkCounter = timeBetweenChecks;
+                if(Vector3.Distance(transform.position, player.transform.position) < pickupRange)
+                {
+                    movingToPlayer = true;
+                    moveSpeed = player.MoveSpeed;
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Teste");
+        Debug.Log("Tag: "+ collision.tag);
+
+        if (collision.tag == "Player")
+        {
+            Debug.Log("Triggered");
+
+            coinController.AddCoins(coinAmount);
+            Destroy(gameObject);
+        }
+    }
+}

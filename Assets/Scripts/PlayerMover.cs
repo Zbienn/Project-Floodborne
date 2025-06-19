@@ -9,6 +9,8 @@ public class PlayerMover : MonoBehaviour
 
     private Vector2 movement;
 
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+
     void Update()
     {
         // Input
@@ -40,7 +42,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Move()
     {
-        Vector3 delta = movement.normalized * moveSpeed * Time.deltaTime;
+        Vector3 delta = movement.normalized * MoveSpeed * Time.deltaTime;
         transform.position += delta;
     }
 }
