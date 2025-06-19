@@ -1,6 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.UI;
 
 public class ExperienceUIController : MonoBehaviour
 {
@@ -34,5 +35,11 @@ public class ExperienceUIController : MonoBehaviour
         xpSlider.value = playerXP.CurrentXP;
 
         levelText.text = $"Level: {playerXP.CurrentLevel}";
+    }
+
+    public void SkipLevelUp()
+    {
+        LevelUpPanel.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

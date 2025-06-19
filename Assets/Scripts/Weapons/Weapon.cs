@@ -15,12 +15,29 @@ public class Weapon : MonoBehaviour
     public bool StatsUpdated { get => statsUpdated; set => statsUpdated = value; }
     public Sprite Icon { get => icon; }
 
+    private PlayerWeapon playerWeapon;
+
     public void LevelUp()
     {
         if (weaponLevel < stats.Count - 1)
         {
             weaponLevel++;
             statsUpdated = true;
+
+            if (weaponLevel >= stats.Count - 1) {
+                if (playerWeapon == null)
+                    playerWeapon = FindFirstObjectByType<PlayerWeapon>();
+
+                if (playerWeapon != null)
+                {
+                    playerWeapon.FullyLeveledWeapons.Add(this);
+                    playerWeapon.CurrentWeapons.Remove(this);
+                }
+                else
+                {
+                    Debug.LogWarning("PlayerWeapon não foi encontrado ao tentar remover a arma do inventário.");
+                }
+            }
         }
     }
 }
