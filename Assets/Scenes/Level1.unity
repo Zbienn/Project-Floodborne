@@ -44223,7 +44223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[4].speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].range
@@ -44231,7 +44231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].speed
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].range
@@ -44275,19 +44275,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[4].amount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[4].damage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].amount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].damage
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].amount
@@ -44319,7 +44319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[5].duration
-      value: 6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[6].duration
@@ -44339,7 +44339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[3].upgradeText
-      value: +5 Base Dmg & x2 Speed
+      value: +1 Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 2089431960774475303, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
       propertyPath: stats.Array.data[4].upgradeText

@@ -29,7 +29,12 @@ public class OrbitBoat : Weapon
         {
             spawnCounter = cooldown;
 
-            Instantiate(boatToSpawn, boatToSpawn.position, boatToSpawn.rotation, holder).gameObject.SetActive(true);
+            //Instantiate(boatToSpawn, boatToSpawn.position, boatToSpawn.rotation, holder).gameObject.SetActive(true);
+            for(int i = 0; i < Stats[WeaponLevel].Amount; i++)
+            {
+                float newRotation = (360 / Stats[WeaponLevel].Amount) * i;
+                Instantiate(boatToSpawn, boatToSpawn.position, Quaternion.Euler(0f, 0f, newRotation), holder).gameObject.SetActive(true);
+            }
         }
 
         if(StatsUpdated == true)
