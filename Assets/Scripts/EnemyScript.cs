@@ -17,6 +17,10 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField] private DamageNumberController damageNumberController;
 
+    [Header("Coin Drop Settings")]
+    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private float coinDropChance = 0.25f; // 25%
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,17 +52,21 @@ public class EnemyScript : MonoBehaviour
             spriteRenderer.flipX = direction.x < 0;
     }
 
-
     public void TakeDamage(float amount, bool shouldKnockBack)
     {
         currentHealth -= amount;
 
         if (currentHealth <= 0)
         {
+            // Drop XP if available
             EnemyXPDropper dropper = GetComponent<EnemyXPDropper>();
             if (dropper != null)
-            {
                 dropper.DropXP();
+
+            // 25% chance to drop a coin
+            if (coinPrefab != null && Random.value <= coinDropChance)
+            {
+                Instantiate(coinPrefab, transform.position, Quaternion.identity);
             }
 
             Destroy(gameObject);
@@ -71,5 +79,4 @@ public class EnemyScript : MonoBehaviour
             knockBackCounter = knockBackTime;
         }
     }
-
 }
