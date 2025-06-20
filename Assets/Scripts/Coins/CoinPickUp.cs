@@ -42,13 +42,9 @@ public class CoinPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Teste");
-        Debug.Log("Tag: "+ collision.tag);
 
         if (collision.tag == "Player")
         {
-            Debug.Log("Triggered");
-
             coinController.AddCoins(coinAmount);
             Destroy(gameObject);
         }
