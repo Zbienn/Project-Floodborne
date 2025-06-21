@@ -1,4 +1,7 @@
+using System;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 public class PlayerMover : MonoBehaviour
 {
@@ -7,14 +10,35 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private ParticleSystem leftTrailParticles;
     [SerializeField] private ParticleSystem rightTrailParticles;
 
+    [SerializeField] AudioMixer audioMixer;
+    [SerializeField] Sprite spriteA;
+    [SerializeField] Sprite spriteB;
+    [SerializeField] Sprite spriteC;
+    [SerializeField] Sprite spriteD;
+
     private Vector2 movement;
     private Rigidbody2D body;
+    private int boatSprite;
+    private float audioVolume;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
+
+        boatSprite = int.Parse(PlayerPrefs.GetString("BoatSprite", "1"));
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
+        sr.sprite = boatSprite switch
+        {
+            0 => spriteA,
+            1 => spriteB,
+            2 => spriteC,
+            _ => spriteD,
+        };
+
+        audioVolume = float.Parse(PlayerPrefs.GetString("AudioVolume", "0"));
+        audioMixer.SetFloat("Volume", audioVolume);
     }
 
     void Update()

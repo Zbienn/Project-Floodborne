@@ -1,0 +1,46 @@
+using System;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
+public class SettingsMenu : MonoBehaviour
+{
+    [SerializeField] AudioMixer audioMixer;
+    [SerializeField] GameObject boat;
+    [SerializeField] Sprite spriteA;
+    [SerializeField] Sprite spriteB;
+    [SerializeField] Sprite spriteC;
+    [SerializeField] Sprite spriteD;
+
+    private SpriteRenderer sr;
+
+    private void Start()
+    {
+        sr = boat.GetComponentInChildren<SpriteRenderer>();
+
+        float audioVolume = float.Parse(PlayerPrefs.GetString("AudioVolume", "0"));
+        Slider slider = GetComponentInChildren<Slider>();
+        slider.value = audioVolume;
+    }
+
+    public void ChangeBoatColor(int option)
+    {
+        sr.sprite = option switch
+        {
+            0 => spriteA,
+            1 => spriteB,
+            2 => spriteC,
+            _ => spriteD,
+        };
+        PlayerPrefs.SetString("BoatSprite", option.ToString());
+        PlayerPrefs.Save();
+    }
+
+    public void SetVolume(float volume) 
+    {
+        audioMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetString("AudioVolume", volume.ToString());
+        PlayerPrefs.Save();
+    }
+}

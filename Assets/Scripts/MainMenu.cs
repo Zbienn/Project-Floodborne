@@ -1,11 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void OpenUpgradeShop()
+    {
+
     }
 
     public void QuitGame()
