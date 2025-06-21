@@ -8,8 +8,14 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private ParticleSystem rightTrailParticles;
 
     private Vector2 movement;
+    private Rigidbody2D body;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+
+    private void Start()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -36,13 +42,15 @@ public class PlayerMover : MonoBehaviour
             if (rightTrailParticles.isPlaying) rightTrailParticles.Stop();
         }
 
+        if (body.linearVelocity != Vector2.zero) body.linearVelocity = Vector2.zero;
+
         // Movimento
         Move();
     }
 
     private void Move()
     {
-        Vector3 delta = movement.normalized * MoveSpeed * Time.deltaTime;
+        Vector3 delta = MoveSpeed * Time.deltaTime * movement.normalized;
         transform.position += delta;
     }
 }
