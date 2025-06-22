@@ -15636,6 +15636,7 @@ MonoBehaviour:
   textureB: {fileID: 2800000, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
   textureC: {fileID: 2800000, guid: 6cff73470135d64498d2dd6209e20183, type: 3}
   textureD: {fileID: 2800000, guid: 6554c299befb0d54281a97ba09301d5d, type: 3}
+  pause: {fileID: 0}
 --- !u!114 &2362048327687744577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15835,7 +15836,10 @@ MonoBehaviour:
   healthData: {fileID: 11400000, guid: add75d8859018714181cf073994988d2, type: 2}
   _healthUi: {fileID: 3889485756512224867}
   _iFrameDuration: 1
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 7b8664b4ba830944eb170890eca46f1c, type: 3}
+  - {fileID: 8300000, guid: de6818ea2bfcad443a2e759aa5762b3a, type: 3}
+  gameOver: {fileID: 0}
 --- !u!82 &4861723460425449684
 AudioSource:
   m_ObjectHideFlags: 0

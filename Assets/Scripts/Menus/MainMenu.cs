@@ -4,10 +4,11 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Level1");
-    }
+    public void PlayGame() => SceneManager.LoadScene("Level1");
+
+    public void OpenMainMenu() => SceneManager.LoadScene("MainMenu");
+
+    public void ResetTime() => Time.timeScale = 1f;
 
     public void OpenUpgradeShop()
     {
@@ -17,6 +18,6 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("SAIR DO JOGO");
-        Application.Quit();         
+        Application.Quit();
     }
 }

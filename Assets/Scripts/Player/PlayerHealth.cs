@@ -13,13 +13,14 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private AudioClip[] audios;
     private AudioSource sound;
+    private CoinController coinController; 
 
-    [SerializeField] private CoinController coinController;
-
+    [SerializeField] private GameObject gameOver;
 
     void Awake()
     {
         sound = GetComponent<AudioSource>();
+        coinController = FindFirstObjectByType<CoinController>();
         ResetHealth();
     }
 
@@ -55,19 +56,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void ResetHealth()
-    {
-        healthData.CurrentHealth = healthData.MaxHealth;
-    }
+    private void ResetHealth() => healthData.CurrentHealth = healthData.MaxHealth;
 
     private void Die()
     {
         Debug.Log("Jogador morreu!");
-        // Aqui colocas a lógica de game over ou respawn
 
         coinController.SaveCoins();
 
-
+        Time.timeScale = 0f;
+        gameOver.SetActive(true);
     }
 
     private IEnumerator InvulnerabilityCoroutine()

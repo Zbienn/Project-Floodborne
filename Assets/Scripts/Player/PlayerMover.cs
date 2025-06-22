@@ -21,10 +21,15 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private Texture2D textureC;
     [SerializeField] private Texture2D textureD;
 
+    [SerializeField] private GameObject pause;
+
     private Vector2 movement;
     private Rigidbody2D body;
     private int boatSprite;
     private float audioVolume;
+
+    private bool isPaused = false;
+    public bool IsPaused { get => isPaused; set => isPaused = value; }
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
@@ -72,6 +77,8 @@ public class PlayerMover : MonoBehaviour
 
     void Update()
     {
+        CheckIfPause();
+
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -105,5 +112,24 @@ public class PlayerMover : MonoBehaviour
     {
         Vector3 delta = MoveSpeed * Time.deltaTime * movement.normalized;
         transform.position += delta;
+    }
+
+    private void CheckIfPause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isPaused)
+            {
+                Time.timeScale = 0f;
+                isPaused = true;
+                pause.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                isPaused = false;
+                pause.SetActive(false);
+            }
+        }
     }
 }
