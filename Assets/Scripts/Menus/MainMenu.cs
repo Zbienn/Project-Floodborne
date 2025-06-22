@@ -10,11 +10,6 @@ public class MainMenu : MonoBehaviour
 
     public void ResetTime() => Time.timeScale = 1f;
 
-    public void OpenUpgradeShop()
-    {
-
-    }
-
     public void QuitGame()
     {
         Debug.Log("SAIR DO JOGO");
