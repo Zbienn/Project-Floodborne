@@ -11,8 +11,11 @@ public class ProjectileWeapon : Weapon
     [SerializeField] private float weaponRange;
     [SerializeField] private LayerMask whatIsEnemy;
 
+    private AudioSource sfx;
+
     void Start()
     {
+        sfx = GetComponent<AudioSource>();
         SetStats();
     }
 
@@ -33,6 +36,7 @@ public class ProjectileWeapon : Weapon
             Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, weaponRange * Stats[WeaponLevel].Range, whatIsEnemy);
 
             if (enemies.Length > 0) {
+                sfx.Play();
                 for (int i = 0; i < Stats[WeaponLevel].Amount; i++)
                 {
                     Vector3 targetPosition = enemies[Random.Range(0, enemies.Length)].transform.position;
@@ -43,7 +47,6 @@ public class ProjectileWeapon : Weapon
                     projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
                     Instantiate(projectile, projectile.transform.position, projectile.transform.rotation).gameObject.SetActive(true);
-
                 }
             }
         }

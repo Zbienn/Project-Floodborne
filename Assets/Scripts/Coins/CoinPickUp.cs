@@ -14,6 +14,8 @@ public class CoinPickUp : MonoBehaviour
     private PlayerMover player;
     private CoinController coinController;
 
+    [SerializeField] private AudioClip sfx;
+
     void Start()
     {
         if (player == null) player = FindFirstObjectByType<PlayerMover>();
@@ -28,7 +30,7 @@ public class CoinPickUp : MonoBehaviour
         } else
         {
             checkCounter -= Time.deltaTime;
-            if(checkCounter <= 0 )
+            if(checkCounter <= 0)
             {
                 checkCounter = timeBetweenChecks;
                 if(Vector3.Distance(transform.position, player.transform.position) < pickupRange)
@@ -42,10 +44,10 @@ public class CoinPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
             coinController.AddCoins(coinAmount);
+            coinController.PlaySound(sfx);
             Destroy(gameObject);
         }
     }

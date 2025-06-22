@@ -5,12 +5,13 @@ public class WeaponThrower : Weapon
     [SerializeField] private EnemyDamager damager;
     private float throwCounter;
 
+    private AudioSource sfx;
 
     void Start()
     {
+        sfx = GetComponent<AudioSource>();
         SetStats();
     }
-
     
     void Update()
     {
@@ -24,6 +25,7 @@ public class WeaponThrower : Weapon
         if (throwCounter <= 0) { 
             throwCounter = Stats[WeaponLevel].TimeBetweenAttacks;
 
+            sfx.Play();
             for (int i = 0; i < Stats[WeaponLevel].Amount; i++) {
                 Instantiate(damager, damager.transform.position, damager.transform.rotation).gameObject.SetActive(true);
             }

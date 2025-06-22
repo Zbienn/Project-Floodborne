@@ -5,12 +5,12 @@ public class CloseAttackWeapon : Weapon
 {
     [SerializeField] private EnemyDamager damager;
     private float attackCounter, direction;
+    private AudioSource sfx;
      
     void Start()
     {
-
+        sfx = GetComponent<AudioSource>();
         SetStats();
-
     }
 
     void Update()
@@ -39,6 +39,7 @@ public class CloseAttackWeapon : Weapon
                 }
             }
 
+            sfx.Play();
             Instantiate(damager, damager.transform.position, damager.transform.rotation, transform).gameObject.SetActive(true);
             for (int i = 1; i < Stats[WeaponLevel].Amount; i++)
             {

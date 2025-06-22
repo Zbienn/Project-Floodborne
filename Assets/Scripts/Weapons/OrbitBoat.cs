@@ -10,11 +10,13 @@ public class OrbitBoat : Weapon
     private float spawnCounter;
 
     [SerializeField] private EnemyDamager damager;
-
     [SerializeField] ExperienceUIController uiController;
+
+    private AudioSource sfx;
 
     void Start()
     {
+        sfx = GetComponent<AudioSource>();
         SetStats();
     }
 
@@ -28,9 +30,10 @@ public class OrbitBoat : Weapon
         if (spawnCounter <= 0)
         {
             spawnCounter = cooldown;
+            sfx.Play();
 
             //Instantiate(boatToSpawn, boatToSpawn.position, boatToSpawn.rotation, holder).gameObject.SetActive(true);
-            for(int i = 0; i < Stats[WeaponLevel].Amount; i++)
+            for (int i = 0; i < Stats[WeaponLevel].Amount; i++)
             {
                 float newRotation = (360 / Stats[WeaponLevel].Amount) * i;
                 Instantiate(boatToSpawn, boatToSpawn.position, Quaternion.Euler(0f, 0f, newRotation), holder).gameObject.SetActive(true);

@@ -5,8 +5,11 @@ public class ZoneWeapon : Weapon
     [SerializeField] private EnemyDamager damager;
     private float spawnTime, spawnCounter;
 
+    private AudioSource sfx;
+
     private void Start()
     {
+        sfx = GetComponent<AudioSource>();
         SetStats();
     }
 
@@ -22,7 +25,7 @@ public class ZoneWeapon : Weapon
         if(spawnCounter <= 0f)
         {
             spawnCounter = spawnTime;
-
+            sfx.Play();
             Instantiate(damager, damager.transform.position, Quaternion.identity, transform).gameObject.SetActive(true);
         }
     }

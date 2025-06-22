@@ -106,6 +106,7 @@ MonoBehaviour:
   moveSpeed: 8
   timeBetweenChecks: 2
   pickupRange: 0
+  sfx: {fileID: 8300000, guid: ae9cd29e6e56e204280c4b10c95b720f, type: 3}
 --- !u!58 &593924583322025701
 CircleCollider2D:
   m_ObjectHideFlags: 0

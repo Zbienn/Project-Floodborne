@@ -167,4 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpAmount: 9
   playerExperience: {fileID: 11400000, guid: 2431533a818de024282fb44d5967b46d, type: 2}
-  playerWeapon: {fileID: 4813763962220207532, guid: f8079e8fdb5d6c24bbfea30cf6645f86, type: 3}
+  weaponsToUpgrade: []
+  audios:
+  - {fileID: 8300000, guid: 6cabd54a5dddaa6458422278e4237140, type: 3}
+  - {fileID: 8300000, guid: ae9cd29e6e56e204280c4b10c95b720f, type: 3}

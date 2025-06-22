@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +16,14 @@ public class XPPickup : MonoBehaviour
 
     [SerializeField] private List<Weapon> weaponsToUpgrade;
 
+    private CoinController coinController;
+    [SerializeField] private AudioClip[] audios;
+
     void Start()
     {
-        if (uiController == null)
-            uiController = FindFirstObjectByType<ExperienceUIController>();
+        if (uiController == null) uiController = FindFirstObjectByType<ExperienceUIController>();
         if (playerWeapon == null) playerWeapon = FindFirstObjectByType<PlayerWeapon>();
+        if (coinController == null) coinController = FindFirstObjectByType<CoinController>();
     }
 
     private void Update()
@@ -34,7 +38,12 @@ public class XPPickup : MonoBehaviour
                 {
                     bool leveledUp = playerExperience.AddXP(xpAmount);
                     if (leveledUp)
+                    {
+                        coinController.PlaySound(audios[0]);
                         LeveledUp();
+                    }
+                    else
+                        coinController.PlaySound(audios[1]);
                 }
 
                 Destroy(gameObject);
