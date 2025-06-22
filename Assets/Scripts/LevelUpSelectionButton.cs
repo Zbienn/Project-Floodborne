@@ -18,22 +18,20 @@ public class LevelUpSelectionButton : MonoBehaviour
 
     public void UpdateButtonDisplay(Weapon weapon)
     {
-        if(weapon.gameObject.activeSelf == true)
-        {
-
-        upgradeDescText.text = weapon.Stats[weapon.WeaponLevel].UpgradeText;
+        weaponIcon.preserveAspect = true;
         weaponIcon.sprite = weapon.Icon;
 
-        upgradeNameText.text = weapon.name + " - Lvl " + (weapon.WeaponLevel + 1);
-
-        } else
+        if (weapon.gameObject.activeSelf == true)
+        {
+            upgradeDescText.text = weapon.Stats[weapon.WeaponLevel].UpgradeText;
+            upgradeNameText.text = weapon.name + " - Lvl " + (weapon.WeaponLevel + 1);
+        } 
+        else
         {
             upgradeDescText.text = "Unlock " + weapon.name;
-            weaponIcon.sprite = weapon.Icon;
-
             upgradeNameText.text = weapon.name;
         }
-            assignedWeapon = weapon;
+        assignedWeapon = weapon;
     }
 
     public void SelectUpgrade()

@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvulnerable = false;
     [SerializeField] private float _iFrameDuration;
 
+    private CoinController coinController;
 
     void Awake()
     {
@@ -23,10 +24,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {            
-                int damage = collision.gameObject.GetComponent<EnemyScript>().DamageAmount;
-                TakeDamage(damage);
-                _healthUi.value = healthData.CurrentHealth;
-                StartCoroutine(InvulnerabilityCoroutine());
+            int damage = collision.gameObject.GetComponent<EnemyScript>().DamageAmount;
+            TakeDamage(damage);
+            _healthUi.value = healthData.CurrentHealth;
+            StartCoroutine(InvulnerabilityCoroutine());
         }
     }
 
@@ -49,6 +50,9 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Jogador morreu!");
         // Aqui colocas a lógica de game over ou respawn
+
+        coinController.SaveCoins();
+
     }
 
     private IEnumerator InvulnerabilityCoroutine()

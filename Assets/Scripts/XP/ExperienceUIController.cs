@@ -39,7 +39,7 @@ public class ExperienceUIController : MonoBehaviour
 
     public void SkipLevelUp()
     {
-        LevelUpPanel.gameObject.SetActive(false);
+        LevelUpPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 }

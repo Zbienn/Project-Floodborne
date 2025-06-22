@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerHealthData : ScriptableObject
 {
     [SerializeField] [Range(0,100)] private int maxHealth = 100;
-    [SerializeField][Range(0, 100)] private int currentHealth;
+    [SerializeField] [Range(0,100)] private int currentHealth;
 
 
     public int CurrentHealth

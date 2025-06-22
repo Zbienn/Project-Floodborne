@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     public List<WeaponStats> Stats => stats;
     public int WeaponLevel => weaponLevel;
     public bool StatsUpdated { get => statsUpdated; set => statsUpdated = value; }
-    public Sprite Icon { get => icon; }
+    public Sprite Icon { get => icon; set => icon = value; }
 
     private PlayerWeapon playerWeapon;
 
