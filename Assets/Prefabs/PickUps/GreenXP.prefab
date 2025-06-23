@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86beffd90df6af4a864b445ec7463f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xpAmount: 2
+  xpAmount: 5
   playerExperience: {fileID: 11400000, guid: 2431533a818de024282fb44d5967b46d, type: 2}
   weaponsToUpgrade: []
   audios:
