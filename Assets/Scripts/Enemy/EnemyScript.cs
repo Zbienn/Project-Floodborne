@@ -35,6 +35,10 @@ public class EnemyScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player")?.transform;
         currentHealth = data.MaxHealth;
         currentSpeed = data.Speed;
+
+        StatsForJSON luckOffset = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""))[8];
+        coinDropChance += luckOffset.level * 0.1f;
+        if (coinDropChance > 1) coinDropChance = 1f;
     }
 
     void FixedUpdate()

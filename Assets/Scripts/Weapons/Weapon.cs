@@ -56,7 +56,7 @@ public class WeaponStats {
     public float Speed { get => speed; set => speed = Mathf.Max(0, value); }
     public float Damage { get => damage; set => damage = Mathf.Max(0, value); }
     public float Range { get => range; set => range = Mathf.Max(0, value); }
-    public float TimeBetweenAttacks { get => timeBetweenAttacks; set => timeBetweenAttacks = Mathf.Max(0, value); }
+    public float TimeBetweenAttacks { get => timeBetweenAttacks; set => timeBetweenAttacks = Mathf.Max(0.5f, value); }
     public int Amount { get => amount; set => amount = Mathf.Max(0, value); }
     public float Duration { get => duration; set => duration = Mathf.Max(0, value); }
     public string UpgradeText { get => upgradeText; set => upgradeText = value; }

@@ -19,7 +19,7 @@ public class SettingsMenu : MonoBehaviour
     {
         sr = boat.GetComponentInChildren<SpriteRenderer>();
 
-        float audioVolume = float.Parse(PlayerPrefs.GetString("AudioVolume", "0"));
+		float audioVolume = PlayerPrefs.GetFloat("AudioVolume", 0f);
         Slider slider = GetComponentInChildren<Slider>();
         slider.value = audioVolume;
     }
@@ -33,14 +33,14 @@ public class SettingsMenu : MonoBehaviour
             2 => spriteC,
             _ => spriteD,
         };
-        PlayerPrefs.SetString("BoatSprite", option.ToString());
+        PlayerPrefs.SetInt("BoatSprite", option);
         PlayerPrefs.Save();
     }
 
     public void SetVolume(float volume) 
     {
         audioMixer.SetFloat("Volume", volume);
-        PlayerPrefs.SetString("AudioVolume", volume.ToString());
+        PlayerPrefs.SetFloat("AudioVolume", volume);
         PlayerPrefs.Save();
     }
 }

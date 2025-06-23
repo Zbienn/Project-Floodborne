@@ -9,7 +9,7 @@ public class XPPickup : MonoBehaviour
     [SerializeField] private PlayerExperienceData playerExperience;
     private Transform target;
     private bool isBeingPulled = false;
-    private float pullSpeed = 8f;
+    private float pullSpeed = 10f;
 
     private ExperienceUIController uiController;
     private PlayerWeapon playerWeapon;
@@ -24,6 +24,9 @@ public class XPPickup : MonoBehaviour
         if (uiController == null) uiController = FindFirstObjectByType<ExperienceUIController>();
         if (playerWeapon == null) playerWeapon = FindFirstObjectByType<PlayerWeapon>();
         if (coinController == null) coinController = FindFirstObjectByType<CoinController>();
+
+        StatsForJSON magnetOffset = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""))[7];
+        pullSpeed += magnetOffset.level * 0.5f;
     }
 
     private void Update()
@@ -83,7 +86,8 @@ public class XPPickup : MonoBehaviour
             availableWeapons.RemoveAt(selected);
         }
 
-        if (playerWeapon.CurrentWeapons.Count + playerWeapon.FullyLeveledWeapons.Count < playerWeapon.MaxWeapons) { availableWeapons.AddRange(playerWeapon.UnassignedWeapons); }
+        if (playerWeapon.CurrentWeapons.Count + playerWeapon.FullyLeveledWeapons.Count < playerWeapon.MaxWeapons) 
+            availableWeapons.AddRange(playerWeapon.UnassignedWeapons);
 
         for (int i = weaponsToUpgrade.Count; i < playerWeapon.MaxWeapons; i++)
         {

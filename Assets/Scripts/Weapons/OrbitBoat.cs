@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
@@ -13,10 +14,23 @@ public class OrbitBoat : Weapon
     [SerializeField] ExperienceUIController uiController;
 
     private AudioSource sfx;
+    private StatsForJSON[] array;
+    private Dictionary<string, float> offsets;
+    private int amountOffset = 0;
 
     void Start()
     {
         sfx = GetComponent<AudioSource>();
+        array = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""));
+        offsets = new Dictionary<string, float>()
+        {
+            { "Cooldown", array[1].level * 0.2f },
+            { "Area", array[2].level * 0.5f },
+            { "Speed", array[3].level * 0.2f },
+            { "Duration", array[4].level * 0.3f },
+            { "Damage", array[9].level * 0.5f }
+        };
+        amountOffset += array[5].level;
         SetStats();
     }
 
@@ -49,11 +63,13 @@ public class OrbitBoat : Weapon
 
     public void SetStats()
     {
-        damager.BaseDamage = Stats[WeaponLevel].Damage;
-        transform.localScale = Vector3.one * Stats[WeaponLevel].Range;
-        cooldown = Stats[WeaponLevel].TimeBetweenAttacks;
-        damager.Duration = Stats[WeaponLevel].Duration;
-
+        damager.BaseDamage = Stats[WeaponLevel].Damage + offsets["Damage"];
+        damager.Duration = Stats[WeaponLevel].Duration + offsets["Duration"];
+        Stats[WeaponLevel].Range += offsets["Area"];
+        damager.transform.localScale = Vector3.one * Stats[WeaponLevel].Range;
+        cooldown = Stats[WeaponLevel].TimeBetweenAttacks - offsets["Cooldown"];
+        Stats[WeaponLevel].Speed += offsets["Speed"];
+        Stats[WeaponLevel].Amount += amountOffset;
         spawnCounter = 0f;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CoinPickUp : MonoBehaviour
@@ -5,7 +6,7 @@ public class CoinPickUp : MonoBehaviour
     [SerializeField] private int coinAmount = 1;
 
     private bool movingToPlayer;
-    [SerializeField] private float moveSpeed;
+    private float pullSpeed = 10f;
 
     [SerializeField] private float timeBetweenChecks = 2f;
     [SerializeField] private float pickupRange;
@@ -20,24 +21,24 @@ public class CoinPickUp : MonoBehaviour
     {
         if (player == null) player = FindFirstObjectByType<PlayerMover>();
         if (coinController == null) coinController = FindFirstObjectByType<CoinController>();
+        StatsForJSON magnetOffset = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""))[7];
+        pullSpeed += magnetOffset.level * 0.5f;
     }
 
     void Update()
     {
-        if(movingToPlayer == true)
+        if(movingToPlayer)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
-        } else
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, pullSpeed * Time.deltaTime);
+        } 
+        else
         {
             checkCounter -= Time.deltaTime;
             if(checkCounter <= 0)
             {
                 checkCounter = timeBetweenChecks;
                 if(Vector3.Distance(transform.position, player.transform.position) < pickupRange)
-                {
                     movingToPlayer = true;
-                    moveSpeed = player.MoveSpeed;
-                }
             }
         }
     }

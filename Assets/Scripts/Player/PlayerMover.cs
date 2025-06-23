@@ -10,7 +10,7 @@ using Object = UnityEngine.Object;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Transform spriteTransform;
     [SerializeField] private ParticleSystem leftTrailParticles;
     [SerializeField] private ParticleSystem rightTrailParticles;
@@ -27,6 +27,7 @@ public class PlayerMover : MonoBehaviour
     private Rigidbody2D body;
     private int boatSprite;
     private float audioVolume;
+    private StatsForJSON[] array;
 
     private bool isPaused = false;
     public bool IsPaused { get => isPaused; set => isPaused = value; }
@@ -37,7 +38,7 @@ public class PlayerMover : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
 
-        boatSprite = int.Parse(PlayerPrefs.GetString("BoatSprite", "1"));
+        boatSprite = PlayerPrefs.GetInt("BoatSprite", 1);
         SpriteRenderer boat = FindFirstObjectByType<SpriteRenderer>();
         SpriteRenderer[] boats = GetComponentsInChildren<SpriteRenderer>();
 
@@ -71,13 +72,21 @@ public class PlayerMover : MonoBehaviour
             if (gameObj.name.Contains("Boat"))
                 gameObj.Icon = sprites[2];
 
-        audioVolume = float.Parse(PlayerPrefs.GetString("AudioVolume", "0"));
+        audioVolume = PlayerPrefs.GetFloat("AudioVolume", 0f);
         audioMixer.SetFloat("Volume", audioVolume);
+
+        if (PlayerPrefs.HasKey("StatsArray"))
+        {
+            array = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""));
+            moveSpeed += array[6].level * 0.5f;
+        }
     }
 
     void Update()
     {
-        CheckIfPause();
+        if (pause != null)
+            if ((!isPaused && Time.timeScale > 0f) || (isPaused && Time.timeScale <= 0f))
+                CheckIfPause();
 
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -110,7 +119,7 @@ public class PlayerMover : MonoBehaviour
 
     private void Move()
     {
-        Vector3 delta = MoveSpeed * Time.deltaTime * movement.normalized;
+        Vector3 delta = moveSpeed * Time.deltaTime * movement.normalized;
         transform.position += delta;
     }
 

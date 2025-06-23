@@ -1,8 +1,9 @@
-using UnityEngine;
+using System;
 using System.Collections;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,11 +18,27 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private GameObject gameOver;
 
-    void Awake()
+    private StatsForJSON[] array;
+
+    void Start()
     {
         sound = GetComponent<AudioSource>();
         coinController = FindFirstObjectByType<CoinController>();
-        ResetHealth();
+
+        healthData.OnAfterDeserialize();
+
+        if (PlayerPrefs.HasKey("StatsArray"))
+        {
+            array = JsonHelper.FromJson<StatsForJSON>(PlayerPrefs.GetString("StatsArray", ""));
+            healthData.MaxHealth += array[0].level * 10;
+        }
+
+        if (_healthUi != null)
+        {
+            _healthUi.maxValue = healthData.MaxHealth;
+            _healthUi.value = healthData.MaxHealth;
+        }
+        healthData.CurrentHealth = healthData.MaxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -55,8 +72,6 @@ public class PlayerHealth : MonoBehaviour
             sound.Play();
         }
     }
-
-    private void ResetHealth() => healthData.CurrentHealth = healthData.MaxHealth;
 
     private void Die()
     {

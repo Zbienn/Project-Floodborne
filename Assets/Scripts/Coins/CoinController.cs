@@ -11,7 +11,9 @@ public class CoinController : MonoBehaviour
 
     private void Start()
     {
+        currentCoins = PlayerPrefs.GetInt("Coins", 0);
         coinText = GetComponent<TMP_Text>();
+        coinText.text = currentCoins.ToString();
         sfx = GetComponent<AudioSource>();
     }
 
@@ -29,8 +31,7 @@ public class CoinController : MonoBehaviour
 
     public void SaveCoins()
     {
-        int coins = int.Parse(PlayerPrefs.GetString("Coins", "0"));
-        PlayerPrefs.SetString("Coins", (coins + currentCoins).ToString());
+        PlayerPrefs.SetInt("Coins", currentCoins);
         PlayerPrefs.Save();
     }
 }
