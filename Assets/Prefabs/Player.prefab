@@ -14819,11 +14819,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2b4e42826334f458cbbf588c9c616a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 4227050055373810918, guid: 93c3a2adb7860f943914464bdc57bb81, type: 3}
-  spawnCooldown: 0.5
   minSpawn: {fileID: 670652294057344663}
   maxSpawn: {fileID: 805046017638591714}
   checksPerFrame: 30
+  winPanel: {fileID: 0}
   waves:
   - enemyToSpawn: {fileID: 4227050055373810918, guid: 93c3a2adb7860f943914464bdc57bb81, type: 3}
     waveLength: 10
@@ -15242,7 +15241,7 @@ SpriteRenderer:
   m_SortingLayerID: 167560891
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -673278486980131988, guid: 6cff73470135d64498d2dd6209e20183, type: 3}
+  m_Sprite: {fileID: -2704322010331973617, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

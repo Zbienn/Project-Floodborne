@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jefferson-s-studios-wasd-export_0: -6521211054693434574
+      jefferson-s-studios-wasd-export_1: 8189108233730752273
+      jefferson-s-studios-wasd-export_2: -8323770719660930095
+      jefferson-s-studios-wasd-export_3: 7858115093646462980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
