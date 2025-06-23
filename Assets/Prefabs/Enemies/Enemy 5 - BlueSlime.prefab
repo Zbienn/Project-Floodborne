@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: 49723f3da26d0224f896a74b8a1e1f99, type: 3}
-  data: {fileID: 11400000, guid: b23680671e732aa4f98aed03c3bc9686, type: 2}
+  data: {fileID: 11400000, guid: 535fa9b67408b0849ad234995101aa73, type: 2}
   knockBackTime: 0.5
   damageNumberController: {fileID: 0}
   coinPrefab: {fileID: 5408089178781467523, guid: a12e2bfa4261ef24d93853e46227b158, type: 3}
-  coinDropChance: 0.1
+  coinDropChance: 0.25
 --- !u!114 &3835886225761758072
 MonoBehaviour:
   m_ObjectHideFlags: 0

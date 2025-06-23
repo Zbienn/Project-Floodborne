@@ -4,8 +4,6 @@ using UnityEngine.UIElements;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyToSpawn;
-    [SerializeField] private float spawnCooldown;
     private float SpawnCounter;
 
     [SerializeField] private Transform minSpawn, maxSpawn;
@@ -16,31 +14,23 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int checksPerFrame;
     private int enemyToCheck;
 
+    [SerializeField] private GameObject winPanel;
+
     [SerializeField] private List<WaveInfo> waves;
     private int currentWave;
     private float waveCounter;
 
     void Start()
     {
-        //SpawnCounter = spawnCooldown;
 
         despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 3f;
 
         currentWave = -1;
         GoToNextWave();
-
-
     }
 
     void Update()
     {
-        /* SpawnCounter -= Time.deltaTime;
-         if (SpawnCounter <= 0)
-         {
-             SpawnCounter = spawnCooldown;
-             GameObject newEnemy = Instantiate(enemyToSpawn, SelectSpawnPoint(), transform.rotation);
-             spawnedEnemies.Add(newEnemy);
-         }*/
 
         if (gameObject.activeSelf)
         {
@@ -143,7 +133,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (currentWave >= waves.Count)
         {
-            currentWave = waves.Count - 1;
+            Time.timeScale = 0f;
+            winPanel.SetActive(true);
+            return;
         }
 
         waveCounter = waves[currentWave].WaveLength;

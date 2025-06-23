@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b48c8777b2c5b3409ada11811ac6aad, type: 3}
   m_Name: Shark
   m_EditorClassIdentifier: 
-  damageAmount: 25
-  speed: 2
+  damageAmount: 50
+  speed: 3
   maxHealth: 100

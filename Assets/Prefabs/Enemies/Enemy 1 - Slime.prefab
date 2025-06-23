@@ -194,7 +194,7 @@ MonoBehaviour:
   knockBackTime: 0.5
   damageNumberController: {fileID: 0}
   coinPrefab: {fileID: 5408089178781467523, guid: a12e2bfa4261ef24d93853e46227b158, type: 3}
-  coinDropChance: 0.1
+  coinDropChance: 0.25
 --- !u!114 &5667231052378044145
 MonoBehaviour:
   m_ObjectHideFlags: 0
