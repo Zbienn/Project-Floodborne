@@ -15632,10 +15632,16 @@ MonoBehaviour:
   leftTrailParticles: {fileID: 4124976040725804378}
   rightTrailParticles: {fileID: 5427597990652561197}
   audioMixer: {fileID: 24100000, guid: 2b6ba2603ff73d3498e5b928109c3927, type: 2}
-  textureA: {fileID: 2800000, guid: 8e28e43d381ace8498f79dc2e1b7b280, type: 3}
-  textureB: {fileID: 2800000, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
-  textureC: {fileID: 2800000, guid: 6cff73470135d64498d2dd6209e20183, type: 3}
-  textureD: {fileID: 2800000, guid: 6554c299befb0d54281a97ba09301d5d, type: 3}
+  sprites:
+  - {fileID: 6017396720064629453, guid: 8e28e43d381ace8498f79dc2e1b7b280, type: 3}
+  - {fileID: -2985409896421829575, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
+  - {fileID: -1979752278117465619, guid: 6cff73470135d64498d2dd6209e20183, type: 3}
+  - {fileID: 8275392307619992807, guid: 6554c299befb0d54281a97ba09301d5d, type: 3}
+  spriteSmalls:
+  - {fileID: 5896002666611833739, guid: 8e28e43d381ace8498f79dc2e1b7b280, type: 3}
+  - {fileID: -2704322010331973617, guid: 9d250e560941ede4a9ca231be50a47df, type: 3}
+  - {fileID: -673278486980131988, guid: 6cff73470135d64498d2dd6209e20183, type: 3}
+  - {fileID: 5459081079838404879, guid: 6554c299befb0d54281a97ba09301d5d, type: 3}
   pause: {fileID: 0}
 --- !u!114 &2362048327687744577
 MonoBehaviour:

@@ -16,10 +16,9 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private ParticleSystem rightTrailParticles;
 
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Texture2D textureA;
-    [SerializeField] private Texture2D textureB;
-    [SerializeField] private Texture2D textureC;
-    [SerializeField] private Texture2D textureD;
+    
+    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private Sprite[] spriteSmalls;
 
     [SerializeField] private GameObject pause;
 
@@ -40,37 +39,16 @@ public class PlayerMover : MonoBehaviour
 
         boatSprite = PlayerPrefs.GetInt("BoatSprite", 1);
         SpriteRenderer boat = FindFirstObjectByType<SpriteRenderer>();
-        SpriteRenderer[] boats = GetComponentsInChildren<SpriteRenderer>();
 
-        Object[] data = boatSprite switch
-        {
-            0 => AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(textureA)),
-            1 => AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(textureB)),
-            2 => AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(textureC)),
-            _ => AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(textureD)),
-        };
-
-        List<Sprite> sprites = new();
-        foreach (Object obj in data)
-            if (obj.GetType() == typeof(Sprite))
-                sprites.Add(obj as Sprite);
-
-        sprites.Sort(
-            delegate (Sprite x, Sprite y) 
-            { 
-                return ((int)x.name.Last()).CompareTo(((int)y.name.Last())); 
-            }
-        );
-
-        boat.sprite = sprites[1];
+        boat.sprite = sprites[boatSprite];
 
         foreach (SpriteRenderer gameObj in Resources.FindObjectsOfTypeAll(typeof(SpriteRenderer)).Cast<SpriteRenderer>())
             if (gameObj.name.Contains("Boat"))
-                gameObj.sprite = sprites[2];
+                gameObj.sprite = spriteSmalls[boatSprite];
 
         foreach (OrbitBoat gameObj in Resources.FindObjectsOfTypeAll(typeof(OrbitBoat)).Cast<OrbitBoat>())
             if (gameObj.name.Contains("Boat"))
-                gameObj.Icon = sprites[2];
+                gameObj.Icon = spriteSmalls[boatSprite];
 
         audioVolume = PlayerPrefs.GetFloat("AudioVolume", 0f);
         audioMixer.SetFloat("Volume", audioVolume);
